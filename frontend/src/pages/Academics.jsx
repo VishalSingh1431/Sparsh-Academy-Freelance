@@ -52,10 +52,11 @@ const Academics = () => {
               </div>
             </div>
             <div className="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
-              <div className="w-full h-64 md:h-full bg-gray-300 rounded-lg overflow-hidden flex items-center justify-center">
-                {/* Replace with actual curriculum image */}
-                <span className="text-gray-500">Curriculum Image</span>
-              </div>
+              <img 
+                src="/images/53.jpg" 
+                alt="Sparsh Academy Curriculum" 
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -74,7 +75,8 @@ const Academics = () => {
                   "Phonics reading program",
                   "Hands-on math activities",
                   "Social-emotional development"
-                ]
+                ],
+                image: "/images/57.jpg"
               },
               {
                 title: "Elementary (3-5)",
@@ -84,7 +86,8 @@ const Academics = () => {
                   "STEM introduction",
                   "Creative writing focus",
                   "Research skill development"
-                ]
+                ],
+                image: "/images/44.jpg"
               },
               {
                 title: "Middle School (6-8)",
@@ -94,23 +97,33 @@ const Academics = () => {
                   "Advanced math tracks",
                   "Science lab rotations",
                   "High school prep workshops"
-                ]
+                ],
+                image: "/images/55.jpg"
               }
             ].map((program, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-5xl mb-4">{program.icon}</div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-3">{program.title}</h4>
-                <p className="text-gray-600 mb-4">{program.description}</p>
-                <ul className="space-y-2">
-                  {program.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={program.image} 
+                    alt={program.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="text-4xl mb-3">{program.icon}</div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">{program.title}</h4>
+                  <p className="text-gray-600 mb-4">{program.description}</p>
+                  <ul className="space-y-2">
+                    {program.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -125,28 +138,41 @@ const Academics = () => {
               {
                 title: "Reading Initiative",
                 icon: "📚",
-                description: "Daily DEAR (Drop Everything And Read) time and leveled libraries"
+                description: "Daily DEAR (Drop Everything And Read) time and leveled libraries",
+                image: "/images/5.jpg"
               },
               {
                 title: "Math Masters",
                 icon: "🧮",
-                description: "Competency-based math program with manipulatives and real-world applications"
+                description: "Competency-based math program with manipulatives and real-world applications",
+                image: "/images/28.jpg"
               },
               {
                 title: "Young Scientists",
                 icon: "🔬",
-                description: "Hands-on experiments and annual science fair for all grades"
+                description: "Hands-on experiments and annual science fair for all grades",
+                image: "/images/47.jpg"
               },
               {
                 title: "Digital Literacy",
                 icon: "💻",
-                description: "Age-appropriate technology integration starting from 1st grade"
+                description: "Age-appropriate technology integration starting from 1st grade",
+                image: "/images/74.jpg"
               }
             ].map((program, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center">
-                <div className="text-4xl mb-4">{program.icon}</div>
-                <h4 className="text-xl font-semibold mb-2 text-gray-900">{program.title}</h4>
-                <p className="text-gray-600">{program.description}</p>
+              <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div className="h-40 overflow-hidden">
+                  <img 
+                    src={program.image} 
+                    alt={program.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <div className="text-3xl mb-3">{program.icon}</div>
+                  <h4 className="text-xl font-semibold mb-2 text-gray-900">{program.title}</h4>
+                  <p className="text-gray-600">{program.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -211,11 +237,12 @@ const Academics = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="md:flex">
-                <div className="md:w-1/3 bg-gray-100 p-8 flex items-center justify-center">
-                  <div className="w-full h-64 bg-gray-300 rounded-lg flex items-center justify-center">
-                    {/* Replace with faculty collage image */}
-                    <span className="text-gray-500">Faculty Image</span>
-                  </div>
+                <div className="md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
+                  <img 
+                    src="/images/26.jpg" 
+                    alt="Sparsh Academy Faculty" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
                 <div className="md:w-2/3 p-8">
                   <p className="text-gray-600 mb-6">

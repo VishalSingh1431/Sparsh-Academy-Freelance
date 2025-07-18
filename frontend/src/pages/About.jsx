@@ -82,12 +82,11 @@ const About = () => {
               </div>
             </div>
             <div className="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
-              <div className="w-full h-64 md:h-full bg-gray-300 rounded-lg overflow-hidden">
-                {/* Replace with actual school building image */}
-                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                  <span>School Building Image</span>
-                </div>
-              </div>
+              <img 
+                src="/images/46.jpg" 
+                alt="Sparsh Academy Building" 
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -99,28 +98,31 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Ramesh Sharma",
+                name: "Dr. Raj Kumar Singh",
                 role: "Principal",
                 bio: "With 25+ years in education, Dr. Sharma holds a PhD in Educational Leadership and has transformed our academic programs.",
-                img: "/images/principal.jpg" // Replace with actual image path
+                img: "/images/.jpg"
               },
               {
                 name: "Ms. Priya Singh",
                 role: "Head of Academics",
                 bio: "Specialized in curriculum development with 15 years experience in CBSE pattern education.",
-                img: "/images/academics.jpg" // Replace with actual image path
+                img: "/images/.jpg"
               },
               {
                 name: "Mr. Amit Patel",
                 role: "Administrative Head",
                 bio: "Oversees school operations and infrastructure development with expertise in educational management.",
-                img: "/images/admin.jpg" // Replace with actual image path
+                img: "/images/.jpg"
               }
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div className="h-64 bg-gray-300 flex items-center justify-center">
-                  {/* Replace with actual image */}
-                  <span className="text-gray-500">Photo of {member.name}</span>
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={member.img} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h4 className="text-xl font-bold text-gray-900">{member.name}</h4>
@@ -161,20 +163,21 @@ const About = () => {
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Facilities</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              {title: "Classrooms", img: "/images/classroom.jpg"},
-              {title: "Science Lab", img: "/images/lab.jpg"},
-              {title: "Library", img: "/images/library.jpg"},
-              {title: "Playground", img: "/images/playground.jpg"},
-              {title: "Computer Lab", img: "/images/computer-lab.jpg"},
-              {title: "Auditorium", img: "/images/auditorium.jpg"},
-              {title: "Art Room", img: "/images/art-room.jpg"},
-              {title: "Cafeteria", img: "/images/cafeteria.jpg"}
+              {title: "Classrooms", img: "/images/55.jpg"},
+              {title: "Science Lab", img: "/images/6.jpg"},
+              {title: "Library", img: "/images/73.jpg"},
+              {title: "Playground", img: "/images/86.jpg"},
+              {title: "Computer Lab", img: "/images/73.jpg"},
+              {title: "Auditorium", img: "/images/49.jpg"},
+              {title: "Art Room", img: "/images/76.jpg"},
+              {title: "Cafeteria", img: "/images/17.jpg"}
             ].map((facility, index) => (
               <div key={index} className="group relative rounded-lg overflow-hidden shadow-md h-48">
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-                  {/* Replace with actual images */}
-                  <span className="text-gray-500">{facility.title} Image</span>
-                </div>
+                <img 
+                  src={facility.img} 
+                  alt={facility.title}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-white font-bold text-lg">{facility.title}</span>
                 </div>

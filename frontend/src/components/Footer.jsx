@@ -78,7 +78,7 @@ const Footer = () => {
               {[
                 { icon: <FaMapMarkerAlt />, text: 'Partawal Bazar, Maharajganj, UP 273303' },
                 { icon: <FaPhone />, text: '9935417930, 9839018770', link: 'tel:9935417930' },
-                { icon: <FaEnvelope />, text: 'prabhadentalcareclinic@gmail.com', link: 'mailto:prabhadentalcareclinic@gmail.com' },
+                { icon: <FaEnvelope />, text: 'sparshacademy@gmail.com', link: 'mailto:prabhadentalcareclinic@gmail.com' },
                 { icon: <FaClock />, text: 'Mon-Sat: 8:00 AM - 4:00 PM' }
               ].map((contact, index) => (
                 <motion.div 

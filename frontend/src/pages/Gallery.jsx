@@ -4,17 +4,108 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Gallery = () => {
   // Sample images array (replace with your actual images from public folder)
   const images = [
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-    '/images/logo.jpg',
-  ];
+  '/images/logo.jpg',
+  '/images/1.jpg',
+  '/images/2.jpg',
+  '/images/3.jpg',
+  '/images/4.jpg',
+  '/images/5.jpg',
+  '/images/6.jpg',
+  '/images/7.jpg',
+  '/images/8.jpg',
+  '/images/9.jpg',
+  '/images/10.jpg',
+  '/images/11.jpg',
+  '/images/12.jpg',
+  '/images/13.jpg',
+  '/images/14.jpg',
+  '/images/15.jpg',
+  '/images/16.jpg',
+  '/images/17.jpg',
+  '/images/18.jpg',
+  '/images/19.jpg',
+  '/images/20.jpg',
+  '/images/21.jpg',
+  '/images/22.jpg',
+  '/images/23.jpg',
+  '/images/24.jpg',
+  '/images/25.jpg',
+  '/images/26.jpg',
+  '/images/27.jpg',
+  '/images/28.jpg',
+  '/images/29.jpg',
+  '/images/30.jpg',
+  '/images/31.jpg',
+  '/images/32.jpg',
+  '/images/33.jpg',
+  '/images/34.jpg',
+  '/images/35.jpg',
+  '/images/36.jpg',
+  '/images/37.jpg',
+  '/images/38.jpg',
+  '/images/39.jpg',
+  '/images/40.jpg',
+  '/images/41.jpg',
+  '/images/42.jpg',
+  '/images/43.jpg',
+  '/images/44.jpg',
+  '/images/45.jpg',
+  '/images/46.jpg',
+  '/images/47.jpg',
+  '/images/48.jpg',
+  '/images/49.jpg',
+  '/images/50.jpg',
+  '/images/51.jpg',
+  '/images/52.jpg',
+  '/images/53.jpg',
+  '/images/54.jpg',
+  '/images/55.jpg',
+  '/images/56.jpg',
+  '/images/57.jpg',
+  '/images/58.jpg',
+  '/images/59.jpg',
+  '/images/60.jpg',
+//   '/images/61.jpg',
+//   '/images/62.jpg',
+//   '/images/63.jpg',
+//   '/images/64.jpg',
+//   '/images/65.jpg',
+//   '/images/66.jpg',
+//   '/images/67.jpg',
+//   '/images/68.jpg',
+//   '/images/69.jpg',
+  '/images/70.jpg',
+  '/images/71.jpg',
+  '/images/72.jpg',
+  '/images/73.jpg',
+  '/images/74.jpg',
+  '/images/75.jpg',
+  '/images/76.jpg',
+  '/images/77.jpg',
+  '/images/78.jpg',
+  '/images/79.jpg',
+  '/images/80.jpg',
+  '/images/81.jpg',
+  '/images/82.jpg',
+  '/images/83.jpg',
+  '/images/84.jpg',
+  '/images/85.jpg',
+  '/images/86.jpg',
+  '/images/87.jpg',
+  '/images/88.jpg',
+  '/images/89.jpg',
+  '/images/90.jpg',
+  '/images/91.jpg',
+  '/images/92.jpg',
+  '/images/93.jpg',
+  '/images/94.jpg',
+  '/images/95.jpg',
+  '/images/96.jpg',
+  '/images/97.jpg',
+  '/images/98.jpg',
+  '/images/99.jpg'
+];
+
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,8 +140,10 @@ const Gallery = () => {
 
   return (
     <div className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12">School Gallery</h1>
+      <div className="container mx-auto px-4 text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            School <span className="text-blue-600">Gallery</span>
+          </h2>
         
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -68,7 +161,7 @@ const Gallery = () => {
                 className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                 </svg>
