@@ -1,12 +1,29 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
+
+  const navLinks = [
+    { path: '/', name: 'Home' },
+    { path: '/about', name: 'About' },
+    { path: '/gallery', name: 'Gallery' },
+    { path: '/why-choose-us', name: 'Why Choose Us' },
+    { path: '/academics', name: 'Academics' },
+    { path: '/contact', name: 'Contact Us' }
+  ];
+
+  const socialLinks = [
+    { icon: <FaFacebook size={20} />, color: 'hover:text-blue-400', url: 'https://www.facebook.com/share/1HFPu726V5/' },
+    { icon: <FaTwitter size={20} />, color: 'hover:text-sky-400', url: '#' },
+    { icon: <FaInstagram size={20} />, color: 'hover:text-pink-400', url: 'https://www.instagram.com/sparsh.academy?igsh=cGg1a2FzeGwzbjMw' },
+    { icon: <FaYoutube size={20} />, color: 'hover:text-red-400', url: '#' }
+  ];
 
   return (
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white pt-16 pb-8">
@@ -30,16 +47,13 @@ const Footer = () => {
               Empowering young minds through excellence in education since 2010. Our vision is to create leaders of tomorrow.
             </p>
             <div className="flex space-x-5">
-              {[
-                { icon: <FaFacebook size={20} />, color: 'hover:text-blue-400' },
-                { icon: <FaTwitter size={20} />, color: 'hover:text-sky-400' },
-                { icon: <FaInstagram size={20} />, color: 'hover:text-pink-400' },
-                { icon: <FaYoutube size={20} />, color: 'hover:text-red-400' }
-              ].map((social, index) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
                   whileHover={{ y: -3 }}
-                  href="#"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`text-blue-200 transition-colors ${social.color}`}
                 >
                   {social.icon}
@@ -54,16 +68,19 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Academics', 'Admissions', 'Gallery', 'Contact'].map((item, index) => (
+              {navLinks.map((item, index) => (
                 <motion.li 
                   key={index}
                   whileHover={{ x: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
-                  <a href="#" className="text-blue-100 hover:text-indigo-300 transition-colors flex items-center">
+                  <Link 
+                    to={item.path} 
+                    className="text-blue-100 hover:text-indigo-300 transition-colors flex items-center"
+                  >
                     <span className="w-2 h-2 bg-indigo-300 rounded-full mr-2"></span>
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -78,7 +95,7 @@ const Footer = () => {
               {[
                 { icon: <FaMapMarkerAlt />, text: 'Partawal Bazar, Maharajganj, UP 273303' },
                 { icon: <FaPhone />, text: '9935417930, 9839018770', link: 'tel:9935417930' },
-                { icon: <FaEnvelope />, text: 'sparshacademy@gmail.com', link: 'mailto:prabhadentalcareclinic@gmail.com' },
+                { icon: <FaEnvelope />, text: 'sparshacademy@gmail.com', link: 'mailto:sparshacademy@gmail.com' },
                 { icon: <FaClock />, text: 'Mon-Sat: 8:00 AM - 4:00 PM' }
               ].map((contact, index) => (
                 <motion.div 
