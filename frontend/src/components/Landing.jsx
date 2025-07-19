@@ -26,7 +26,7 @@ const Landing = () => {
             </h1>
             
             <p className="text-2xl sm:text-3xl md:text-4xl text-gray-700 font-medium mb-6 md:mb-8">
-              Partawal Bazar, Maharajganj
+              Parsha Bujurag tawal Bazar, Maharajganj
             </p>
             
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 font-semibold mb-8">
@@ -42,7 +42,7 @@ const Landing = () => {
           <div className="md:w-1/2 flex justify-center px-4 sm:px-0">
             <div className="relative w-full max-w-xl">
               <img 
-                src="/images/landing.jpg" 
+                src="/images/72.jpg" 
                 alt="Sparsh Academy Campus"
                 className="w-full rounded-xl shadow-2xl border-4 border-white transform transition-all duration-500 hover:scale-102 hover:shadow-2xl"
               />
